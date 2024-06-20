@@ -98,7 +98,7 @@ async def UploadImage(file: bytes = File(...)):
         return {"title":"Quality issues are too severe to recognize visual content."}
 
     complete_content = generate_response("Generate a vivid, short and engaging caption that captures the essence of the provided image.")
-    print(response)
+    print(complete_content)
     return {"title":complete_content}
 
 @app.post("/chat")
@@ -108,7 +108,7 @@ async def Chat(prompt:str,file: bytes = File(...)):
     image.close()
   
   response = generate_response(prompt)
-    print(response)
+  print(response)
   return {"content":response}
 
 # os.system(f"ngrok authtoken 2fX4X2BATxalJmNiCutMXV1qR6k_4RXntzTaGfFuGwYpRuKcE")
