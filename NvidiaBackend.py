@@ -17,9 +17,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-@app.get("/")
-async def redirect_root_to_docs():
-    return RedirectResponse("/docs")
+# @app.get("/")
+# async def redirect_root_to_docs():
+#     return RedirectResponse("/docs")
 
 def image_to_base64(image_path):
     if image_path.startswith('http://') or image_path.startswith('https://'):
